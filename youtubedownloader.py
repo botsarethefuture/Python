@@ -6,39 +6,39 @@ from pytube import YouTube
 
 def threading():
     # Call work function
-    t1=Thread(target=download)
+    t1 = Thread(target=download)
     t1.start()
+
 
 def download():
     url = YouTube(str(url_box.get()))
     video = url.streams.first()
-    video.download()    
-    messagebox.showinfo('', 'Download completed!')
+    video.download()
+    messagebox.showinfo("", "Download completed!")
 
-root =Tk()
-root.title('YouTube Downloader')
-root.geometry('780x500+200+200')
-#root.iconbitmap('youtube.ico')
-root.configure(bg='olivedrab1')
-root.resizable(False,False)
+
+root = Tk()
+root.title("YouTube Downloader")
+root.geometry("780x500+200+200")
+# root.iconbitmap('youtube.ico')
+root.configure(bg="olivedrab1")
+root.resizable(False, False)
 
 # Label widgets
 introlable = Label(
     root,
-    text='YouTube Video Downloader',
+    text="YouTube Video Downloader",
     width=30,
-    relief='ridge',
+    relief="ridge",
     bd=4,
-    font=('chiller',26,'italic bold'),
-    fg='red')
-introlable.place(x=35,y=20)
+    font=("chiller", 26, "italic bold"),
+    fg="red",
+)
+introlable.place(x=35, y=20)
 
-Label(
-    root, 
-    text='Enter YouTube Link', 
-    font=('sans-serif', 16), 
-    bg='olivedrab1'
-    ).place(x=40, y=150)
+Label(root, text="Enter YouTube Link", font=("sans-serif", 16), bg="olivedrab1").place(
+    x=40, y=150
+)
 
 # DownloadingSizeLabel = Label(
 #     root,
@@ -81,20 +81,11 @@ Label(
 # DownloadingLabelResult.place(x=650,y=290)
 
 # Entry widgets
-url_box = Entry(
-    root, 
-    font=('arial',30), 
-    width=30
-    )
+url_box = Entry(root, font=("arial", 30), width=30)
 url_box.place(x=40, y=180)
 
 # Button Widgets
-btn = Button(
-    root, 
-    text='DOWNLOAD', 
-    font=('sans-serif', 25), 
-    command=threading
-    )
+btn = Button(root, text="DOWNLOAD", font=("sans-serif", 25), command=threading)
 btn.place(x=270, y=240)
 
 root.mainloop()

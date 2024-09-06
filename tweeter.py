@@ -6,6 +6,7 @@ Version: 1.0
 
 Tweet text and pics directly from the terminal.
 """
+
 from __future__ import print_function
 
 import os

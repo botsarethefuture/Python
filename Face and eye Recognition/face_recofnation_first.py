@@ -22,10 +22,10 @@ while cap.isOpened():
     )  # we use detectMultiscale library function to detect the predefined structures of a face
     eyes = face_cascade_eye.detectMultiScale(img, 1.1, 7)
     # using for loops we are trying to read each and every frame and map
-    for (x, y, w, h) in faces:
+    for x, y, w, h in faces:
         cv.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 1)
 
-    for (a, b, c, d) in eyes:
+    for a, b, c, d in eyes:
         cv.rectangle(img, (a, b), (a + c, b + d), (255, 0, 0), 1)
 
     cv.imshow("img", img)
