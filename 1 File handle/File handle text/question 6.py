@@ -16,5 +16,6 @@ def lowercase():
         print("The total number of upper case letters are", count_upper)
         print("The total number of letters are", count_lower + count_upper)
 
+
 if __name__ == "__main__":
     lowercase()

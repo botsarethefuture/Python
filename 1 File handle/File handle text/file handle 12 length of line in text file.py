@@ -1,5 +1,5 @@
 def longlines():
-    with open('story.txt', encoding='utf-8') as F:
+    with open("story.txt", encoding="utf-8") as F:
         lines = F.readlines()
 
         for i in lines:

@@ -30,17 +30,18 @@ from playsound import *  # for sound output
 # master
 # auto install for pyttsx3 and speechRecognition
 import os
-try:
-    import pyttsx3 #Check if already installed
-except:# If not installed give exception
-    os.system('pip install pyttsx3')#install at run time
-    import pyttsx3 #import again for speak function
 
-try :
+try:
+    import pyttsx3  # Check if already installed
+except:  # If not installed give exception
+    os.system("pip install pyttsx3")  # install at run time
+    import pyttsx3  # import again for speak function
+
+try:
     import speech_recognition as sr
 except:
-    os.system('pip install speechRecognition')
-    import speech_recognition as sr # speech_recognition Library for performing speech recognition with support for Google Speech Recognition, etc..
+    os.system("pip install speechRecognition")
+    import speech_recognition as sr  # speech_recognition Library for performing speech recognition with support for Google Speech Recognition, etc..
 
 # importing the pyttsx3 library
 import webbrowser
@@ -289,7 +290,7 @@ def get_app(Q):
         "paint": "mspaint.exe",
         "cmd": "cmd.exe",
         "browser": "C:\\Program Files\Internet Explorer\iexplore.exe",
-        "vscode": "C:\\Users\\Users\\User\\AppData\\Local\\Programs\Microsoft VS Code"
+        "vscode": "C:\\Users\\Users\\User\\AppData\\Local\\Programs\Microsoft VS Code",
     }
     # master
 
